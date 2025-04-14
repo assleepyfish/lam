@@ -1,0 +1,76 @@
+body {
+    margin: 0;
+    font-family: Helvetica, Arial, sans-serif;
+
+}
+
+.site-header {
+    background: transparent; /* Transparent header */
+    padding: 20px;
+    text-align: left; /* Align text to the left */
+    position: fixed; /* Keep header fixed */
+    width: 100%; /* Full width */
+    top: 0; /* Align to the top */
+    z-index: 10; /* Ensure it is above other content */
+}
+
+.container { /*content page*/ 
+    display: flex;
+    height: calc(100vh - 60px); /* Full height minus header */
+    margin-top: 60px; /* Space for header */
+    
+}
+
+.site-nav {
+    width: 30%; /* Fixed width for navigation */
+    background-color:  transparent; /* Background color for visibility */
+    padding: 20px;
+    position: fixed; /* Keeps the menu fixed */
+    height: calc(100vh - 60px); /* Full height minus header */
+    top: 60px; /* Below the header */
+    overflow-y: auto; /* Allow scrolling if needed */
+}
+
+.site-nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+.site-nav ul li {
+    margin: 15px 0;
+}
+
+.site-nav a { /*menu item at the left*/
+    text-decoration: none; /* Remove underline from links */
+    color: #333; /* Link color */
+    cursor: pointer; /* Change cursor to pointer */
+}
+
+.site-nav a:hover {
+    color: #007BFF; /* Change color on hover for better visibility */
+}
+
+.content { /*content page at the right*/
+    margin-left: 30%; /* Space for the fixed menu */
+    padding: 20px;
+    height: calc(100vh - 60px); /* Full height minus header */
+    overflow-y: hidden; /* Hide scrollbar initially */
+}
+
+.project {
+    display: none; /* Hide all sections by default */
+}
+
+.project:first-of-type {
+    display: block; /* Show the first section initially */
+}
+
+.site-footer {
+    background:  transparent; /* Footer background */
+    text-align: left; /* Align text to the left */
+    padding: 10px;
+    position: fixed; /* Keep footer fixed */
+    width: 100%; /* Full width */
+    bottom: 300px; /* Align to the bottom */
+    z-index: 10; /* Ensure it is above other content */
+}
