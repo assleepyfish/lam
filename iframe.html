@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"> <!-- Set the character encoding for the document -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Responsive design for mobile devices -->
+  <title>Lynna Lam</title> <!-- Title of the webpage -->
+  <link rel="stylesheet" href="style.css"> <!-- Link to the external CSS stylesheet -->
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+</head>
+<body>
+  <div class="credit">
+        <p>© 2025 Lynna Lam.</p>
+  </div>
+
+  <canvas id="backgroundCanvas"></canvas>
+  <!-- Header Section -->
+  <header class="site-header">
+    <h1> Lynna Lam.</h1><!-- Main title displayed in the header -->
+  </header>
+
+  <!-- Main Container -->
+  <div class="container">
+
+    <!-- Navigation Menu -->
+    <nav class="site-nav">
+      <ul>
+        <li><a href="#project3">Project 3</a></li> <!-- Link to Project 3 -->
+        <li><a href="#project2">project 3</a></li> <!-- Link to Project 2 -->
+        <li><a href="#project1">praese Vita</a></li> <!-- Link to Praese Vita project -->
+        <li><a href="#about">About.</a></li> <!-- Link to About section -->
+        <li><a href="#blog">Blog.</a></li> <!-- Link to Blog section -->
+      </ul>
+    </nav>
+
+
+    <!-- Main Content -->
+    <main class="content">
+      <iframe src="project3.html" id="project3" class="project" style="border: none;"></iframe> <!-- No border for Project 3 -->
+      <iframe src="project2.html" id="project2" class="project" style="border: none;"></iframe> <!-- No border for Project 2 -->
+      <iframe src="project1.html" id="project1" class="project" style="border: none; "></iframe> <!-- No border for Praese Vita project -->
+      <iframe src="about.html" id="about" class="project" style="border: none;"></iframe> <!-- No border for About section -->
+      <iframe src="blog.html" id="blog" class="project" style="border: none;"></iframe> <!-- No border for Blog section -->  
+
+  </div>
+
+ 
+
+  <script>
+    // JavaScript to handle menu clicks and show the relevant content
+    document.querySelectorAll('.site-nav a').forEach(link => {
+      link.addEventListener('click', function(event) {
+        event.preventDefault(); // Prevent default anchor behavior (no page jump)
+        const targetId = this.getAttribute('href'); // Get the target section ID from the link
+
+        // Hide all sections
+        document.querySelectorAll('.project').forEach(iframe => {
+          iframe.style.display = 'none'; // Hide all project sections initially
+        });
+
+        // Show the clicked section
+        const targetIframe = document.querySelector(targetId); // Get the targeted iframe
+        if (targetIframe) {
+          targetIframe.style.display = 'block'; // Show the selected project section
+          targetIframe.scrollIntoView({ behavior: 'smooth' }); // Smoothly scroll to the selected section
+        }
+      });
+    });
+  </script>
+
+</body>
+</html>
