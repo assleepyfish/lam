@@ -23,7 +23,7 @@ body {
     /* font-size: 14px; /* Set font size to 14px; adjust as needed for readability */
     color: #343434; /*#36454F; /*#595656; /* #52496b; /* #49515a; */
     font-size: 14px; 
-    font-family: "Roboto", sans-serif;
+    font-family: "Helvetica Neue", "Helvetica", Arial, sans-serif; /*"Roboto", sans-serif;*/ 
     font-optical-sizing: auto;
     font-weight: 400;
     font-style: normal;
