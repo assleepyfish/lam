@@ -63,12 +63,11 @@ body {
 
 .container { /* Main content container holding the site layout */
     display: flex; /* This allows for a flex container */
-    flex-direction: row; /* Align children in a row */
+    flex-direction: column; /* Align children in a row */
     /* Add more properties as needed */
     background: transparent; /* Make header background transparent for a clean look */
     margin-right: 8%;
     display: flex; /* Use flexbox for layout to align navigation and content side by side */
-    flex-direction: row; /* Align children in a row */
     height: calc(85vh - 0px); /* Set height to 90% of the viewport height */
     margin-left: 10px; /* Center the body horizontally */
     margin-top: 70px; /* Space for the fixed header */
