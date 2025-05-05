@@ -31,11 +31,6 @@ body {
 
 }
 
-@media (max-width: 600px) {
-    .site-nav {
-        width: 100%; /* Stack navigation on smaller screens */
-    }
-}
 
 .credit {
     font-size: 11px; 
@@ -67,7 +62,8 @@ body {
 }
 
 .container { /* Main content container holding the site layout */
-
+    display: flex; /* This allows for a flex container */
+    flex-direction: row; /* Align children in a row */
     /* Add more properties as needed */
     background: transparent; /* Make header background transparent for a clean look */
     margin-right: 8%;
@@ -138,7 +134,7 @@ body {
     /*background: orange; */
     width: 100%;
     /* width:100%; /* Set fixed width for navigation */
-    height: calc(100% - 20px);
+    height: calc(92vh - 10px);
     max-width: 1300px; 
     margin: 0 auto; /* Center the content */
     margin-right: 80%;
